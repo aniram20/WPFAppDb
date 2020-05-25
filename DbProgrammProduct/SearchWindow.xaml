@@ -1,0 +1,41 @@
+﻿<Window x:Class="DbProgrammProduct.SearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DbProgrammProduct"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions> <!--Деление окна на 2 строки-->
+            <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7BE9F6" Offset="0.0"/>
+                    <GradientStop Color="#F083DA" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            </Border> <!--Цвет фона-->
+            <StackPanel Orientation="Horizontal">
+                <TextBox Width="250" Height="27" Opacity="0.6" Margin="10 5 20 0"></TextBox> <!--Строка поиска-->
+                <Button Width="100" Height="40" Content="ПОИСК" Margin="5 0 100 0"></Button> <!--Кнопка поиска-->
+                <Button Width="100" Height="40" Margin="0 0 100 0"> <!--Кнопка личного кабинета-->
+                    <TextBlock TextAlignment="Center">
+                        ЛИЧНЫЙ <LineBreak/> КАБИНЕТ
+                    </TextBlock> <!--Перенос текста-->
+                </Button>
+                <Button Width="100" Height="40" Content="ВЫХОД" Margin="0 0 20 0" Click="Exit_Click"></Button> <!--Выход-->
+            </StackPanel>
+            <Frame Margin="20 0 20 20" Grid.Row="1" Source="Account.xaml" NavigationUIVisibility="Hidden"> <!--Рамка для страниц-->
+
+            </Frame>
+        </Grid>
+    </Grid>
+</Window>

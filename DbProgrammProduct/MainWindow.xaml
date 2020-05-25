@@ -1,0 +1,26 @@
+﻿<Window x:Class="DbProgrammProduct.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DbProgrammProduct"
+        mc:Ignorable="d"
+       Title="MainWindow" Height="450" Width="380"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown"> <!--Перетаскивание окна мышью-->
+    <Grid>
+        <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7BE9F6" Offset="0.0"/>
+                        <GradientStop Color="#F083DA" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+        </Border> <!--Цвет фона-->
+
+        <Frame Source="Autorization.xaml" NavigationUIVisibility="Hidden">
+            
+        </Frame> <!--Рамка для страниц-->
+    </Grid>
+</Window>

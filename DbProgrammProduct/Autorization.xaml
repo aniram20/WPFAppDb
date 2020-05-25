@@ -1,0 +1,97 @@
+﻿<Page x:Class="DbProgrammProduct.Autorization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DbProgrammProduct"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="380"
+      Title="Autorization">
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions> <!--Деление страницы на две строки-->
+
+
+            <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7BE9F6" Offset="0.0"/>
+                        <GradientStop Color="#F083DA" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border> <!--Цвет фона-->
+
+
+            <StackPanel VerticalAlignment="Center">
+                <Image Source="Images/BaseData.png" Width="80"/> <!--Картинка-->
+                <TextBlock Text="Программное обеспечение"
+                           FontWeight="Light"
+                           FontFamily="Helvetica"
+                           FontSize="22"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/> <!--Название-->
+            </StackPanel>
+
+
+            <StackPanel Grid.Row="1">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="tb_login" FontFamily="Helvetica"
+                         FontWeight="Light"
+                         Text="Логин"
+                         FontSize="28"
+                         HorizontalAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="30"
+                         Margin="63 0 0 5"/> <!--Логин-->
+
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/> <!--Подчёркивающая линия-->
+
+
+                <StackPanel Orientation="Horizontal" Margin="0 20 0 5">
+                    <PasswordBox x:Name="pb_password" FontFamily="Helvetica"
+                         FontWeight="Light"
+                         Password="Логин"
+                         FontSize="28"
+                         HorizontalAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="30"
+                         Margin="63 0 0 0"/> <!--Пароль-->
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/> <!--Подчёркивающая линия-->
+
+
+                <StackPanel Orientation="Horizontal" Margin="0 28 0 0">
+                    <Button Width="100" Height="40" Content="ВОЙТИ" Margin="60 0 60 0" Click="Enter_Click"/> <!--Вход-->
+                    <Button Width="100" Height="40" Content="РЕГИСТРАЦИЯ" Click="RegUser_Click"/> <!--Регистрация-->
+                </StackPanel>
+
+                <StackPanel>
+                    <Button Width="100" Height="40" Content="ВЫХОД" Margin="0 12 0 0" Click="Exit_Click"></Button> <!--Выход-->
+                </StackPanel>
+
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Page>

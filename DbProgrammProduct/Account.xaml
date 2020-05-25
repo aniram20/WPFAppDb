@@ -1,0 +1,23 @@
+﻿<Page x:Class="DbProgrammProduct.Account"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DbProgrammProduct"
+      mc:Ignorable="d" 
+      d:DesignHeight="430" d:DesignWidth="760"
+      Title="Account">
+
+    <Grid>
+        <ListView Opacity="0.5" x:Name="listProgramms"> <!--Таблица для вывода из базы данных-->
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="210"  Header="Класс" DisplayMemberBinding="{Binding Title}"/> <!--Заголовок-->
+                    <GridViewColumn Width="Auto" Header="Номер" DisplayMemberBinding="{Binding Number}"/> <!--Заголовок-->
+                    <GridViewColumn Width="300" Header="Название" DisplayMemberBinding="{Binding Name}"></GridViewColumn> <!--Заголовок-->
+                    <GridViewColumn Width="Auto" Header="Дата" DisplayMemberBinding="{Binding Date}"/> <!--Заголовок-->
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>
